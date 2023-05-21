@@ -1,0 +1,12 @@
+<h1>{{title}}</h1>
+<div class="artists">
+<ul>
+  <li *ngFor="let artist of artists">
+    <span>{{ artist.name }}</span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#" (click)="removeArtist($event, artist.id)">remove</a>
+</li>
+<input [(ngModel)]="artistName" type="text">
+<button (click)="addArtist()">add</button>
+</ul>
+</div>
